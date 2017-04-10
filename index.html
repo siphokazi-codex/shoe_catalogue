@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- -->
+<link rel="stylesheet" href="shoe_catalogue.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+<script src="catalogue.json" charset="utf-8"></script>
+
+<title></title>
+</head>
+<body>
+
+<script class="shoesTemp" type="text/handlebars-x">
+  <div id="container">
+  {{#each shoeData}}
+  <div id="shoeContainer">
+  <div id="shoeBrand">
+    <img src={{image}}><br>
+    <b>BRAND:</b> {{brand}}<br>
+    <b>NAME:</b> {{name}}<br>
+    <b>COLOUR:</b> {{color}}<br>
+    <b>PRICE:</b> R{{prices}}.00<br>
+    <b>INSTOCK:</b> {{stock}}<br>
+    <b>SIZES:</b> {{size}}<br>
+  </div>
+  </div>
+  {{/each}}
+ </div>
+</script>
+
+<div id="catalogue">
+  <div id="shop">
+    <h1>L&S SHOE SHOP</h1>
+    <input type="text" placeholder="Add new stock" class="addTxt"/><button class="addBtn">Add</button>
+    <input type="text" placeholder="Search different shoe brands" class="searchTxt"/><button class="searchBtn">Search</button>
+  </div>
+  <div id="brand">
+    <p>Select shoe brand</p>
+    <label><input type="radio" name="brand" value="" 8pppppchecked>All</label><br>
+    <label><input type="radio" name="brand" >Gucci</label><br>
+    <label><input type="radio" name="brand" >Louis Vuitton</label><br>
+    <label><input type="radio" name="brand" >Puma</label><br>
+    <label><input type="radio" name="brand" >Sexy Butterfly</label><br>
+    <label><input type="radio" name="brand" >Timberland</label>
+ </div>
+ <div id="color">
+   <p>Select shoe colour</p>
+   <label><input type="radio" name="color" class="all" checked>All</label><br>
+   <label><input type="radio" name="color" class="blue" >Blue</label><br>
+   <label><input type="radio" name="color" class="black" >Black</label><br>
+   <label><input type="radio" name="color" class="red" >Red</label><br>
+   <label><input type="radio" name="color" class="white" >White</label><br>
+   <label><input type="radio" name="color" class="yellow" >Yellow</label>
+ </div>
+
+ <div class="shoeList">
+
+ </div>
+
+ <div id="remaining">
+ </div>
+
+</div>
+
+<script src="shoe_catalogue.js" charset="utf-8"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+body {
+    margin: auto;
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#shop h1 {
+  margin-top: 5px;
+  font-size: 60px;
+  color: #f7f3dc;
+  margin-left: 35%;
+  font-style: italic;
+  font-weight: bold;
+  box-shadow: #f2db68;
+  margin-bottom: 25px;
+  text-shadow: 0px 3px 5px rgba(249, 152, 158, .75);
+}
+
+.addTxt {
+  height: 22px;
+  width: 16%;
+  font-size: 16px;
+  border-radius: 3px;
+  margin-right: 2px;
+  border-color: #f9989e;
+}
+
+.searchBtn {
+  border-color: #f9989e;
+  color: #42010e;
+}
+
+.addBtn {
+  border-color: #f9989e;
+  color: #42010e;
+}
+
+#shop button {
+  width: 80px;
+  height: 30px;
+  font-size: 16px;
+  border-radius: 3px;
+}
+
+.searchTxt {
+  height: 22px;
+  width: 17%;
+  font-size: 16px;
+  margin-left: 50%;
+  border-radius: 3px;
+  margin-right: 2px;
+  border-color: #f9989e;
+}
+
+label {
+ font-size: 20px;
+ color: #f7f3dc;
+}
+
+p {
+ font-size: 25px;
+ color: #f7f3dc;
+ font-weight: bold;
+}
+
+#color {
+  margin-left: 73%;
+  margin-top: -16.5%;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+}
+
+#shoeContainer {
+  margin-left: 10%;
+}
+
+#shoeBrand {
+  float: left;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-style: inset;
+  background-color: #fff;
+  color: #110900;
+  border-color: #f9989e;
+}
+
+#container {
+    margin-top: 25px;
+    overflow: scroll;
+    width: 1020px;
+    height: 300px;
+
+}
