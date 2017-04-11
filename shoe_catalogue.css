@@ -22,18 +22,31 @@ body {
   width: 16%;
   font-size: 16px;
   border-radius: 3px;
-  margin-right: 2px;
+  margin-right: 1px;
   border-color: #f9989e;
 }
 
 .searchBtn {
   border-color: #f9989e;
   color: #42010e;
+  background-image: url("search.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-left: 20px;
 }
 
 .addBtn {
+  background-image: url("add.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-left: 30px;
   border-color: #f9989e;
   color: #42010e;
+  width: 35%;
+  height: 30px;
+  font-size: 15px;
+  margin-top: 3%;
+  margin-left: 19%;
 }
 
 #shop button {
@@ -47,10 +60,10 @@ body {
   height: 22px;
   width: 17%;
   font-size: 16px;
-  margin-left: 50%;
   border-radius: 3px;
-  margin-right: 2px;
+  margin-right: 1px;
   border-color: #f9989e;
+  margin-top: -5px;
 }
 
 label {
@@ -66,7 +79,7 @@ p {
 
 #color {
   margin-left: 73%;
-  margin-top: -16.5%;
+  margin-top: -17.5%;
 }
 
 img {
@@ -90,9 +103,25 @@ img {
 }
 
 #container {
-    margin-top: 25px;
+    margin-top: 20px;
     overflow: scroll;
     width: 1020px;
     height: 300px;
+    margin-right: -30px;
+}
 
+.newStock {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #f7f3dc;
+  padding: 5px;
+}
+
+#remaining {
+  margin-top: -300px;
+  margin-left: 82%;
+  width: 25%;
+  border-left: 2px #d4d4d6;
+  border-color: #f9989e;
 }

@@ -3,17 +3,17 @@ var addButton = document.querySelector('.addBtn');
 var searchButton = document.querySelector('.searchBtn');
 var addText = document.querySelector('.addTxt');
 var searchText = document.querySelector('.searchTxt');
-var allRadio = document.querySelector('.all');
-var blueRadio = document.querySelector('.blue');
-var blackRadio = document.querySelector('.black');
-var whiteRadio = document.querySelector('.white');
-var yellowRadio = document.querySelector('.yellow');
-
+var colorRadioBtn = document.querySelector('#color');
+var brandRadioBtn = document.querySelector('#brand');
 
 //for diaplay
 var shoeTempText = document.querySelector('.shoesTemp').innerHTML;
 var shoesTemplate = Handlebars.compile(shoeTempText);
 var shoeListElem = document.querySelector('.shoeList');
+
+//display all shoes on program load
+shoeListElem.innerHTML = shoesTemplate({shoeData});
+
 
 //function for my search textbox
 function search () {
@@ -44,41 +44,48 @@ function searchField () {
 }
 
 //function to filter by colour according to radio buttons
-allRadio.addEventListener('click', function (){
+colorRadioBtn.addEventListener('click', function (evt){
   var colour = document.querySelector("input[name = 'color']:checked");
-  shoeListElem.innerHTML = shoesTemplate({shoeData});
-});
+  var brands = document.querySelector("input[name = 'brand']:checked");
+  var filteredBrandData = [];
+  //alert(colour.value);
+  var filteredShoeData = [];
 
-//
-/**blueRadio.addEventListener('click', function {
-  var colour = document.querySelector("input[name = 'color']:checked");
-
-  for (var i=0, shoeData.length; i++)
-  {
-    varshoeListElem.innerHTML = shoesTemplate({shoeData});
+  //show all items in stock
+  if (colour.value === "all") {
+    return shoeListElem.innerHTML = shoesTemplate({shoeData});
   }
+
+  //put the required shoes in filteredShoeData according to colour
+  for (var i=0; i<shoeData.length; i++){
+    var shoe = shoeData[i];
+    if (shoe.color === colour.value) {
+      filteredShoeData.push(shoe);
+    }
+  }
+  shoeListElem.innerHTML = shoesTemplate({shoeData : filteredShoeData});
 });
 
-blackRadio.addEventListener('click', function {
+brandRadioBtn.addEventListener('click', function (evt){
   var colour = document.querySelector("input[name = 'color']:checked");
-  shoeListElem.innerHTML = shoesTemplate({shoeData});
+  var brands = document.querySelector("input[name = 'brand']:checked");
+  var filteredBrandData = [];
+
+  //show all items in stock
+  if (brands.value === "all") {
+    console.log("brands");
+    return shoeListElem.innerHTML = shoesTemplate({shoeData});
+  }
+
+  //put the required shoes in filteredShoeData according to brand name
+  for (var i=0; i<shoeData.length; i++){
+    var shoe = shoeData[i];
+    if (shoe.brand === brands.value) {
+      filteredBrandData.push(shoe);
+    }
+  }
+  shoeListElem.innerHTML = shoesTemplate({shoeData : filteredBrandData});
 });
-
-redRadio.addEventListener('click', function {
-  var colour = document.querySelector("input[name = 'color']:checked");
-  shoeListElem.innerHTML = shoesTemplate({shoeData});
-});
-
-whiteRadio.addEventListener('click', function {
-  var colour = document.querySelector("input[name = 'color']:checked");
-  shoeListElem.innerHTML = shoesTemplate({shoeData});
-});
-
-yellowRadio.addEventListener('click', function {
-  var colour = document.querySelector("input[name = 'color']:checked");
-  shoeListElem.innerHTML = shoesTemplate({shoeData});
-});*/
-
 
 searchText.addEventListener('keyup', search);
 searchButton.addEventListener('click', searchField);
