@@ -1,20 +1,31 @@
 body {
     margin: auto;
-    background-image: url("background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+}
+
+.shoes::after {
+  background-image: url('background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+  z-index: -1;
+  top: 0;
+ left: 0;
+ bottom: 0;
+ right: 0;
+ position: absolute;
+ content: "";
 }
 
 #shop h1 {
   margin-top: 5px;
   font-size: 60px;
-  color: #f7f3dc;
+  color: #420101;
   margin-left: 35%;
   font-style: italic;
   font-weight: bold;
-  box-shadow: #f2db68;
+  box-shadow: #a83939;
   margin-bottom: 25px;
-  text-shadow: 0px 3px 5px rgba(249, 152, 158, .75);
+  text-shadow: 0px 3px 5px rgba(249, 152, 158, .95);
 }
 
 .addTxt {
@@ -27,6 +38,8 @@ body {
 }
 
 .searchBtn {
+  margin-left: 2px;
+  width: 10px;
   border-color: #f9989e;
   color: #42010e;
   background-image: url("search.png");
@@ -67,13 +80,13 @@ body {
 }
 
 label {
- font-size: 20px;
- color: #f7f3dc;
+ font-size: 17px;
+ color: #0c0c0c;
 }
 
 p {
- font-size: 25px;
- color: #f7f3dc;
+ font-size: 21px;
+ color: #0c0c0c;
  font-weight: bold;
 }
 
@@ -88,12 +101,13 @@ img {
 }
 
 #shoeContainer {
-  margin-left: 10%;
+  margin-left: 15%;
+  margin-top: 2%;
 }
 
 #shoeBrand {
   float: left;
-  margin-left: 10px;
+  margin-left: 3px;
   margin-bottom: 10px;
   padding: 5px;
   border-style: inset;
@@ -103,11 +117,37 @@ img {
 }
 
 #container {
-    margin-top: 20px;
-    overflow: scroll;
-    width: 1020px;
+    margin-top: 5px;
+    overflow-y: scroll;
+    width: 82%;
     height: 300px;
-    margin-right: -30px;
+}
+
+#remaining {
+  margin-top: -300px;
+  margin-left: 82%;
+  width: 25%;
+  border-left: 2px #d4d4d6;
+  border-color: #f9989e;
+}
+
+.stock {
+  background-color: #fff;
+  border-top: 2px inset;
+  border-bottom: 2px inset;
+  margin-bottom: 10px;
+  margin-left: 83%;
+  height: 22px;
+  width: 17%;
+  font-size: 18px;
+  border-color: #f9989e;
+  color: #686565;
+  padding: 2px 28px 2px 28px;
+}
+
+.stock:hover {
+  background-color: #a02e2e;
+  color: #fff;
 }
 
 .newStock {
@@ -118,10 +158,7 @@ img {
   padding: 5px;
 }
 
-#remaining {
-  margin-top: -300px;
-  margin-left: 82%;
-  width: 25%;
-  border-left: 2px #d4d4d6;
-  border-color: #f9989e;
+#color {
+  margin-left: 83%;
+  margin-top: -199px;
 }

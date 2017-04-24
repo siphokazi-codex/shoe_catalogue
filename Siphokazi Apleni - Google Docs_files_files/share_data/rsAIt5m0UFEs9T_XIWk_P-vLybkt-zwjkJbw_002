@@ -1,0 +1,12 @@
+/* _GlobalPrefix_ */
+/* _Module_:h */
+try{
+for(var g,aa="function"==typeof Object.defineProperties?Object.defineProperty:function(a,b,c){if(c.get||c.set)throw new TypeError("ES3 does not support getters and setters.");a!=Array.prototype&&a!=Object.prototype&&(a[b]=c.value)},ca="undefined"!=typeof window&&window===this?this:"undefined"!=typeof global&&null!=global?global:this,da=function(){da=function(){};ca.Symbol||(ca.Symbol=ea)},fa=0,ea=function(a){return"jscomp_symbol_"+(a||"")+fa++},ha=function(){da();var a=ca.Symbol.iterator;a||(a=ca.Symbol.iterator=
+ca.Symbol("iterator"));"function"!=typeof Array.prototype[a]&&aa(Array.prototype,a,{configurable:!0,writable:!0,value:function(){return ga(this)}});ha=function(){}},ga=function(a){var b=0;return ja(function(){return b<a.length?{done:!1,value:a[b++]}:{done:!0}})},ja=function(a){ha();a={next:a};a[ca.Symbol.iterator]=function(){return this};return a},ka=function(a,b){ha();a instanceof String&&(a+="");var c=0,d={next:function(){if(c<a.length){var e=c++;return{value:b(e,a[e]),done:!1}}d.next=function(){return{done:!0,
+value:void 0}};return d.next()}};d[Symbol.iterator]=function(){return d};return d},la=ca,ma=["Array","prototype","entries"],na=0;na<ma.length-1;na++){var oa=ma[na];oa in la||(la[oa]={});la=la[oa]}var pa=ma[ma.length-1],qa=la[pa],ra=qa?qa:function(){return ka(this,function(a,b){return[a,b]})};ra!=qa&&null!=ra&&aa(la,pa,{configurable:!0,writable:!0,value:ra});var _DumpException=window._DumpException||function(a){throw a;};window._DumpException=_DumpException;
+(function(){function a(a){this.t={};this.tick=function(a,b,c){this.t[a]=[void 0!=c?c:(new Date).getTime(),b];if(void 0==c)try{window.console.timeStamp("CSI/"+a)}catch(p){}};this.tick("start",null,a)}var b,c;window.performance&&(c=(b=window.performance.timing)&&b.responseStart);var d=0<c?new a(c):new a;window.jstiming={Timer:a,load:d};if(b){var e=b.navigationStart;0<e&&c>=e&&(window.jstiming.srt=c-e)}if(b){var f=window.jstiming.load;0<e&&c>=e&&(f.tick("_wtsrt",void 0,e),f.tick("wtsrt_","_wtsrt",c),
+f.tick("tbsd_","wtsrt_"))}try{b=null,window.chrome&&window.chrome.csi&&(b=Math.floor(window.chrome.csi().pageT),f&&0<e&&(f.tick("_tbnd",void 0,window.chrome.csi().startE),f.tick("tbnd_","_tbnd",e))),null==b&&window.gtbExternal&&(b=window.gtbExternal.pageT()),null==b&&window.external&&(b=window.external.pageT,f&&0<e&&(f.tick("_tbnd",void 0,window.external.startE),f.tick("tbnd_","_tbnd",e))),b&&(window.jstiming.pt=b)}catch(h){}})();
+
+}catch(e){_DumpException(e)}
+/* _GlobalSuffix_ */
+// Google Inc.
