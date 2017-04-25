@@ -54,7 +54,7 @@
   <div id="shop">
     <h1>L&S SHOE SHOP</h1>
       <input type="text" placeholder="Search different shoe brands" class="searchTxt"/><button class="searchBtn">Search</button>
-      <label class="stock">Add New Stock<label/>
+      <label class="myBtn">Add New Stock<label/>
       <!--<button class="stock">Add New Stock</button>-->
   </div>
 
@@ -64,19 +64,22 @@
 
  <div class="shoeList"></div>
 
+ <div id="myModal" class="modal">
+   <!-- Modal content -->
+   <div class="modal-content">
+     <span class="close">&times;</span>
+     <label class="newStock">Add New Stock</label><br>
+     <input type="text" placeholder="Enter brand name" id="brandTxt"/><br>
+     <input type="text" placeholder="Enter shoe name" id="nameTxt"/><br>
+     <input type="text" placeholder="Enter shoe color" id="colorTxt"/><br>
+     <input type="text" placeholder="Enter shoe price" id="pricesTxt"/><br>
+     <input type="text" placeholder="Enter amount of stock" id="stockTxt"/><br>
+     <input type="text" placeholder="Enter shoe size" id="sizeTxt"/><br>
+     <input style="margin-left: 1px; margin-top:5px;" type="file" id="image" value=""><br>
+     <button class="addBtn">Add Stock</button>
+   </div>
 
-<!-- <div id="remaining">
-   <label class="newStock">Add New Stock</label><br>
-   <input type="text" placeholder="Enter brand name" id="brandTxt"/><br>
-   <input type="text" placeholder="Enter shoe name" id="nameTxt"/><br>
-   <input type="text" placeholder="Enter shoe color" id="colorTxt"/><br>
-   <input type="text" placeholder="Enter shoe price" id="pricesTxt"/><br>
-   <input type="text" placeholder="Enter amount of stock" id="stockTxt"/><br>
-   <input type="text" placeholder="Enter shoe size" id="sizeTxt"/><br>
-   <input style="margin-left: 1px; margin-top:5px;" type="file" id="image" value="">
-   <button class="addBtn">Add Stock</button>
- </div> -->
-
+ </div>
  </div>
 </div>
 

@@ -36,6 +36,13 @@ var shoeListElem = document.querySelector('.shoeList');
 var brandListElem = document.querySelector('#brand');
 var colorListElem = document.querySelector('#color');
 
+//elements for the modal box
+var modal = document.querySelector('#myModal');
+// Get the button that opens the modal
+var btn = document.querySelector(".myBtn");
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
 //loop over the array
 var brandMap = {};
 var colorMap ={};
@@ -104,14 +111,16 @@ colorRadioBtn.addEventListener('click', function (evt){
   if ((colour.value === "all") && (brands.value === "all")){
     return shoeListElem.innerHTML = shoesTemplate({shoeData});
   }
-  //else if (()) {
 
   //put the required shoes in filteredShoeData according to colour
   for (var i=0; i<shoeData.length; i++){
     var shoe = shoeData[i];
-    if (shoe.color === colour.value) {
+    if ((shoe.color === colour.value) && (shoe.brand === brands.value)) {
       filteredShoeData.push(shoe);
+      //break;
     }
+    else if ((shoe.color === colour.value) && (brands.value === "all"))
+    filteredShoeData.push(shoe);
   }
   shoeListElem.innerHTML = shoesTemplate({shoeData : filteredShoeData});
 });
@@ -130,9 +139,12 @@ brandRadioBtn.addEventListener('click', function (evt){
   //put the required shoes in filteredShoeData according to brand name
   for (var i=0; i<shoeData.length; i++){
     var shoe = shoeData[i];
-    if (shoe.brand === brands.value) {
+    if ((shoe.brand === brands.value) && (shoe.color === colour.value)) {
       filteredBrandData.push(shoe);
     }
+    else if ((shoe.brand === brands.value) && (colour.value === "all")) {
+      filteredBrandData.push(shoe);
+}
   }
   shoeListElem.innerHTML = shoesTemplate({shoeData : filteredBrandData});
 });
@@ -166,7 +178,6 @@ reader.addEventListener('load', function(){
     var foundShoe = false;
     //onsole.log(shoes);.
 
-
     if (shoeMap[shoes] === undefined) {
       shoeMap[shoes] = shoes;
       shoeData.push({
@@ -181,7 +192,13 @@ reader.addEventListener('load', function(){
       });
     }
 
+
+    console.log(uniqueBrand);
   }
+  uniqueBrand.push({brand : brandValue});
+  uniqueColor.push({color : colorValue});
+  brandListElem.innerHTML = brandTemplate({brandData : uniqueBrand});
+  colorListElem.innerHTML = colorTemplate({colorData : uniqueColor});
     shoeListElem.innerHTML = shoesTemplate({shoeData})
     }, false);
         reader.readAsDataURL(image.files[0]);
@@ -192,7 +209,24 @@ reader.addEventListener('load', function(){
     pricesTextBox.value = "";
     stockTextBox.value = "";
     sizeTextBox.value = "";
-    //console.log(shoeData);
+
+}
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }
 
 searchText.addEventListener('keyup', search);

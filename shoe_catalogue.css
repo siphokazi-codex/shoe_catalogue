@@ -49,17 +49,15 @@ body {
 }
 
 .addBtn {
-  background-image: url("add.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  padding-left: 30px;
+
+  padding-left: 10px;
   border-color: #f9989e;
-  color: #42010e;
-  width: 35%;
+  color: #330000;
+  width: 20%;
   height: 30px;
   font-size: 15px;
   margin-top: 3%;
-  margin-left: 19%;
+  margin-left: 1%;
 }
 
 #shop button {
@@ -131,7 +129,7 @@ img {
   border-color: #f9989e;
 }
 
-.stock {
+.myBtn {
   background-color: #fff;
   border-top: 2px inset;
   border-bottom: 2px inset;
@@ -145,20 +143,65 @@ img {
   padding: 2px 28px 2px 28px;
 }
 
-.stock:hover {
+.myBtn:hover {
   background-color: #a02e2e;
   color: #fff;
 }
 
 .newStock {
-  margin-bottom: 20px;
   font-weight: bold;
-  font-size: 20px;
-  color: #f7f3dc;
-  padding: 5px;
+  font-size: 50px;
+  color: #111;
+  padding: 20px;
+  font-style: italic;
 }
 
 #color {
   margin-left: 83%;
   margin-top: -199px;
+}
+
+#brandTxt, #nameTxt, #colorTxt, #pricesTxt, #stockTxt, #sizeTxt, #image {
+  padding: 5px;
+  margin: 5px;
+  font-size: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+    height: 60%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
